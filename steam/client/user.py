@@ -153,3 +153,7 @@ class SteamUser(object):
     def unblock(self):
         """Unblock user"""
         self._steam.friends.unblock(self)
+ 
+    def send_friend_request(self):
+        """Send friend request to user"""
+        self._steam.friends.add(self.steam_id)
